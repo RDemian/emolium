@@ -1,3 +1,4 @@
+/*
 @font-face {
   font-family: "HeliosExt";
   src: url("../fonts/HeliosExt/HeliosExt.woff") format("woff"),
@@ -28,9 +29,9 @@
 
 @font-face {
   font-family: "Square721TL";
-  src: url("../fonts/Square721TL-Extended/Square-721-TL-Extended.woff") format("woff"),
-  url("../fonts/Square721TL-Extended/Square-721-TL-Extended.otf") format("otf"),
-  url("../fonts/Square721TL-Extended/Square-721-TL-Extended.ttf") format("ttf");
+  src: url("../fonts/Square-721-TL-Extended/Square-721-TL-Extended.woff") format("woff"),
+  url("../fonts/Square-721-TL-Extended/Square-721-TL-Extended.otf") format("otf"),
+  url("../fonts/Square-721-TL-Extended/Square-721-TL-Extended.ttf") format("ttf");
 }
 
 $color-prime: #ffebc4;
@@ -53,42 +54,109 @@ img {
 .page-block {
   position: relative;
   display: flex;
-
-
+  padding: 0 180px;
+  
   &_header {
     height: 630px;
     background-color: #ffebc4;
   }
 
-  &__picture {
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__content-wrap {
+    flex: 1 1 auto;
+  }
 
-    &_series {
-      top: 382px;
-    }
+  &__content-header {
+    margin-bottom: 12px;
+    color: #3a3a3a;
+    font-family: "Square721TL";
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.8px;   
+  }
 
-    &_base-cream {
-      z-index: 1;
-      top: 0;
-      outline: 1px solid red;
-      .page-block__img_label {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
+  &__series-label {
+    margin-bottom: 60px;
+    
+    color: #8c847b;
+    font-family: "Square721TL";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.4px;  
+  }
+
+  &__delimiter {
+    margin-bottom: 30px;
+    width: 130px;
+    border-bottom: 1px solid #000;
+    
+    font-size: 0;
+  }
+  
+  &__img-wrap {
+    position: absolute;
+    z-index: 10;
+
+    &_base {
+      top: 95px;
+      //left: 656px;
+      left: 50%;
+      transform: translateX(-57%);
     }
   }
 
   &__img {
+    
+    &_series {
+      position: absolute;  
+      top: 382px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
+    &_base-cream {
+      position: relative;
+    }
+
+    &_label {
+      position: absolute;
+      z-index: 2;
+      top: -57px;
+      right: -51px;
+    }
   }
-  
-}
 
+  &__age-restrict {
+    margin-top: 27px;
+    margin-left: -150px;
+    display: flex;
+    align-items: center;
+    padding-left: 75px;
+    color: #b29c87;
+    font-family: "HeliosExtLightC";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.42px;
+
+    &_age-0 {
+      background-image: url('../img/base-cream/0+.png');
+      background-repeat: no-repeat;
+      width: 190px;
+      height: 58px;
+    }
+  }
+}
+/*
+  
+
+    
+
+    
+  }
+}
+*/
 /*
 @import "blocks/mixin";
 @import "blocks/page-nav";

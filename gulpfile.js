@@ -57,6 +57,11 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/img'));
 });
 
+gulp.task('images-copy', function() {
+  return gulp.src('source/img/**/*.{png,svg,jpg}')
+    .pipe(gulp.dest('build/img'));
+});
+
 gulp.task('html-copy', function() {
   return gulp.src('source/*.html')
     .pipe(gulp.dest('build'));
@@ -79,6 +84,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('build', function(done){
-  run('clean-build', 'copy', 'style', 'images', 'html-copy', done);
+  run('clean-build', 'copy', 'style', 'images-copy', 'html-copy', done);
+  //run('clean-build', 'copy', 'style', 'images', 'html-copy', done);
   //run('clean-build', 'copy', 'style', 'images', 'webp', 'sprite', 'html-include', done);
 });
