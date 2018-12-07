@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "HeliosExt";
+  src: url("../fonts/HeliosExt/HeliosExt.woff") format("woff"),
+  url("../fonts/HeliosExt/HeliosExt.otf") format("otf"),
+  url("../fonts/HeliosExt/HeliosExt.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "HeliosExt-Bold";
+  src: url("../fonts/HeliosExt-Bold/HeliosExt-Bold.woff") format("woff"),
+  url("../fonts/HeliosExt-Bold/HeliosExt-Bold.otf") format("otf"),
+  url("../fonts/HeliosExt-Bold/HeliosExt-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "HeliosExtLightC";
+  src: url("../fonts/HeliosExtLightC/HeliosExtLightC.woff") format("woff"),
+  url("../fonts/HeliosExtLightC/HeliosExtLightC.otf") format("otf"),
+  url("../fonts/HeliosExtLightC/HeliosExtLightC.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "HeliosExtThinC";
+  src: url("../fonts/HeliosExtThinC/HeliosExtThinC.woff") format("woff"),
+  url("../fonts/HeliosExtThinC/HeliosExtThinC.otf") format("otf"),
+  url("../fonts/HeliosExtThinC/HeliosExtThinC.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Square721TL";
+  src: url("../fonts/Square721TL-Extended/Square-721-TL-Extended.woff") format("woff"),
+  url("../fonts/Square721TL-Extended/Square-721-TL-Extended.otf") format("otf"),
+  url("../fonts/Square721TL-Extended/Square-721-TL-Extended.ttf") format("ttf");
+}
+
+$color-prime: #ffebc4;
+
+body {
+  font-family: 'HeliosExt', "Arial", sans-serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-main {
+  max-width: 1920px;
+  margin: 0 auto;
+  outline: 1px dashed;
+}
+
+.page-block {
+  position: relative;
+  display: flex;
+
+
+  &_header {
+    height: 630px;
+    background-color: #ffebc4;
+  }
+
+  &__picture {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_series {
+      top: 382px;
+    }
+
+    &_base-cream {
+      z-index: 1;
+      top: 0;
+      outline: 1px solid red;
+      .page-block__img_label {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__img {
+
+  }
+  
+}
+
+/*
+@import "blocks/mixin";
+@import "blocks/page-nav";
+@import "blocks/btn";
+@import "blocks/contacts";
+@import "blocks/main-nav";
+@import "blocks/portfolio";
+@import "blocks/slider";
+@import "blocks/benefits";
+@import "blocks/riquest-form";
+@import "blocks/about-company";
+@import "blocks/base-products";
+@import "blocks/products";
+@import "blocks/exampls";
+@import "blocks/card";
+*/
