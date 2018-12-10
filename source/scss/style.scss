@@ -284,7 +284,6 @@ img {
     margin: 0;
     padding-left: 50px;
   }
-
   &__item {
     position: relative;
     margin-bottom: 13px;
@@ -322,7 +321,6 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.42px;
   }
-
   &__lit-list {
     /*counter-reset: myCounter;*/
     list-style-position: outside;
@@ -471,6 +469,7 @@ img {
     /* секция 4 */
     &:nth-of-type(4) {
       padding-bottom: 175px;
+      
       .page-block {
         &__content-left,
         &__content-right {
@@ -490,9 +489,19 @@ img {
         }
         &__content-right {
           align-items: flex-start;
-          .page-block__img-wrap {
-            position: relative;
-            top: -464px;
+          position: relative;
+          
+          .page-block__img-wrap_cream {
+              position: relative;
+              top: -464px;
+          }
+          .page-block__img_sign {
+            position: absolute;
+            left: -10px;
+            bottom: -190px;
+            max-width: none;
+            width: 1439px;
+            height: 137px;
           }
           .page-block__desc {
             margin-top: -422px;
@@ -521,7 +530,9 @@ img {
           }
           &__content-right {
             .page-block__img-wrap {
-              top: -346px;
+              &_cream {
+                top: -346px;
+              }
             }
             .page-block__desc {
               margin-top: -300px;
@@ -697,6 +708,30 @@ img {
           margin-bottom: 70px;  
         }
       }
+
+      @media (max-width: $desktop-m) {
+        height: auto;
+        padding-top: 110px;
+        
+        .page-block__content-left {
+          flex: 0 1 676px; 
+  
+          .page-block__img {
+            position: relative;
+            top: -190px;  
+          }
+        }  
+        .page-block__content-right {
+          flex: 0 1 612px;
+          padding-left: 78px;
+          padding-bottom: 120px;
+          .page-block__slogan {
+            max-width: 500px;
+            margin-top: 70px;
+            margin-bottom: 90px;  
+          }
+        }
+      }
     }
     /* секция 9 */
     &:nth-of-type(9) {
@@ -719,10 +754,25 @@ img {
           }
         }
       }
+
+      @media (max-width: $desktop-m) {
+        height: 780px;
+        padding-top: 70px;
+        background-position: left;
+
+        .page-block {
+          &__title {
+            margin-bottom: 50px;
+          }
+          &__desc_prime {
+            max-width: 610px;
+            padding-left: 39px;
+          }
+        }  
+      }
     }
     /* секция 10 */
     &:nth-of-type(10) {
-      /*height: 455px;*/
       padding-top: 93px;
       
       .page-block__content-left {
@@ -739,9 +789,26 @@ img {
           top: -560px;
         }  
       }
+
+      @media (max-width: $desktop-m) {
+        padding-top: 110px;
+        .page-block__content-left {
+          max-width: 50%;
+        }
+        .page-block__content-right {
+          height: 385px;
+          max-width: 50%;
+          .page-block__img {
+            top: -375px;
+            left: 60px;
+            max-width: 562px;
+          }  
+        }
+      }
     }
     /* секция 11 */
     &:nth-of-type(11) {
+      background-color: #faf9f7;
       padding-top: 18px;
       padding-bottom: 40px;
       .page-block__lit-title {
