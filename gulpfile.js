@@ -13,8 +13,8 @@ var svgstore = require('gulp-svgstore');
 var minify = require('gulp-csso');
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
-var posthtml = require('gulp-posthtml');
-var include = require('posthtml-include');
+/*var posthtml = require('gulp-posthtml');*/
+/*var include = require('posthtml-include');*/
 var run = require('run-sequence');
 
 
@@ -69,7 +69,7 @@ gulp.task('html-copy', function() {
 
 gulp.task('serve', function() {
   server.init({
-    server: 'build/',
+    server: './build/',
     notify: false,
     open: true,
     cors: true,
